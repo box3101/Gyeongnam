@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=10.0,user-scalable=yes" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/ui.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 메인이 들어가는 부분 -->
+    <main class="main-wrap" id="park">
+        <header id="header" class="header">
+   <div class="header__inner inner">
+       <div class="header__logo">
+           <a href="main.html">
+               <img src="../img/logo.png" alt="경남테크노파크 시험평가 지원시스템">
+           </a>
+       </div>
+
+       <ul id="gnb" class="gnb">
+           <li class="gnb__list">
+               <a href="시험분석소개.html" class="gnb__link">시험분석</a>
+           </li>
+           <li class="gnb__list">
+               <a href="절차안내.html" class="gnb__link">신청하기</a>
+           </li>
+           <li class="gnb__list">
+               <a href="관련법령.html" class="gnb__link">자료실</a>
+           </li>
+           <li class="gnb__list">
+               <a href="공지사항.html" class="gnb__link">고객센터</a>
+           </li>
+           <li class="gnb__list">
+               <a href="시험신청내역.html" class="gnb__link">마이페이지</a>
+           </li>
+       </ul>
+
+       <div class="header__login">
+           <div class="header__login-icon">
+               <img src="../img/login-icon.svg" alt="">
+           </div>
+
+           <!-- TODO: hide-txt 클래스 추가시 안보임 -->
+           <!-- 로그아웃을때 -->
+           <a class="header__login-txt" href="로그인.html">로그인</a>
+           <!-- 로그인일때 -->
+           <a class="header__login-txt hide-txt">로그아웃</a>
+       </div>
+
+       <!-- 모바일메뉴 -->
+       <div class="mo-menu">
+           <button type="button" class="mo-menu__icon">
+               <img src="../img/mo-menu.svg" alt="">
+           </button>
+       </div>
+   </div>
+</header>
+
+        <div class="sub-contents">
+            <!-- 서브공통배너 -->
+            <div class="sub-contents__banner">
+                <div class="sub-contents__tit">경남테크노파크</div>
+                <div class="sub-contents__txt">저작권정책</div>
+            </div>
+
+            <!-- 개인정보처리방침 -->
+            <div class="con-area com-page bg-fff">
+                <!-- s:contents -->
+                <div class="inner">
+                    <!-- s:contents -->
+                    <div class="contents-area">
+                        <div class="grey_box2">
+                            <p class="p_type2">경남테크노파크 홈페이지에 게재된 모든 저작물은 저작권법 제7조에 명시된 저작물을 제외하고는 저작권법에 의해 보호를 받고 있습니다.
+                                고객은 경남테크노파크 홈페이지를 이용하면서 얻은 저작물을 저작권자의 사전승낙 없이 복제, 전송, 출판, 배포, 방송등을 통해 영리목적으로 이용하거나 제3자에게
+                                제공해서는 안됩니다. 그리고 경남테크노파크 는 경남테크노파크 홈페이지에서 제공하는 저작물에 기초한 모든 법률행위에 대하여 저작권법 제77조에 명시된 바와 같이
+                                책임제한이 있음을 알려드립니다.
+                            </p>
+                        </div>
+
+                        <h4 class="h4Tit">저작권법 제7조 (보호받지 못하는 저작물등)</h4>
+                        <ul class="ul_line">
+                            <li>다음 각호의 1에 해당하는 것은 이 법에 의한 보호를 받지 못한다. [개정 2000·1·12]</li>
+                            <li>헌법·법률·조약·명령·조례 및 규칙</li>
+                            <li>국가 또는 지방자치단체의 고시·공고·훈령 그밖의 이와 유사한 것</li>
+                            <li>법원의 판결·결정·명령 및 심판이나 행정심판절차 그밖의 이와 유사한 절차에 의한 의결·결정등</li>
+                            <li>국가 또는 지방자치단체가 작성한 것으로서 제1호 내지 제3호에 규정된 것의 편집물 또는 번역물</li>
+                            <li>사실의 전달에 불과한 시사보도</li>
+                        </ul>
+                        <h4 class="h4Tit">저작권법 제102조 (온라인서비스제공자의 책임 제한)</h4>
+                        <p class="p_type1">온라인서비스제공자가 저작물이나 실연·음반·방송 또는 데이터베이스(이하 이 장에서 "저작물등" 이라 한다)의 복제·전송과 관련된 서비스를
+                            제공하는 것과 관련하여 다른 사람에 의한 저작물등의 복제·전송으로 인하여 그 저작권 그 밖의 이 법에 의하여 보호되는 권리가 침해된다는 사실을 알고 당해 복제·전송을
+                            방지하거나 중단시킨 경우에는 다른 사람에 의한 저작권 그 밖의 이 법에 의하여 보호되는 권리의 침해에 관한 온라인서비스제공자의 책임을 감경 또는 면제할 수 있다.
+                            <br>
+                            온라인서비스제공자가 저작물등의 복제·전송과 관련된 서비스를 제공하는 것과 관련하여 다른 사람에 의한 저작물등의 복제·전송으로 인하여 그 저작권 그 밖의 이 법에
+                            의하여 보호되는 권리가 침해된다는 사실을 알고 당해 복제·전송을 방지하거나 중단시키고자 하였으나 기술적으로 불가능한 경우에는 그 다른 사람에 의한 저작권 그 밖의 이
+                            법에 의하여 보호되는 권리의 침해에 관한 온라인서비스제공자의 책임은 면제된다.</p>
+                    </div>
+                    <!-- e:contents -->
+                </div>
+                <!-- e:contents -->
+            </div>
+
+        </div>
+
+      <script>
+            function includeHTML() {
+                var z, i, elmnt, file, xhttp;
+                /*loop through a collection of all HTML elements:*/
+                z = document.getElementsByTagName("*");
+                for (i = 0; i < z.length; i++) {
+                    elmnt = z[i];
+                    /*search for elements with a certain atrribute:*/
+                    file = elmnt.getAttribute("w3-include-html");
+                    if (file) {
+                        /*make an HTTP request using the attribute value as the file name:*/
+                        xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4) {
+                                if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                                if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                                /*remove the attribute, and call this function once more:*/
+                                elmnt.removeAttribute("w3-include-html");
+                                includeHTML();
+                            }
+                        }
+                        xhttp.open("GET", file, true);
+                        xhttp.send();
+                        /*exit the function:*/
+                        return;
+                    }
+                }
+            };
+        </script>
+
+        <section class="cnt-bot">
+   <div class="inner">
+      <ul class="cnt-bot__wrap">
+         <li class="cnt-bot__list">
+            <a target="_blank" href="개인정보처리방침.html" class="cnt-bot__link">개인정보처리방침</a>
+         </li>
+         <li class="cnt-bot__list">
+            <a target="_blank" href="이메일무단수집거부.html" class="cnt-bot__link">이메일무단수집거부</a>
+         </li>
+         <li class="cnt-bot__list">
+            <a target="_blank" href="저작권정책.html" class="cnt-bot__link">저작권정책</a>
+         </li>
+      </ul>
+   </div>
+</section>
+<footer class="footer">
+   <div class="footer__inner inner">
+      <div class="flex-jc-bt">
+         <div>
+            <div class="footer__logo">
+               <img src="../img/fot-logo.png" alt="">
+            </div>
+            <div class="footer__address">
+               경남테크노파크 항공우주센터 (우 52535) 경상남도 사천시 사남면 방지로 80 <br>
+               시스템 문의 : 055-853-6838 <br>
+               COPYRIGHT(C) 2021 BY 경남테크노파크 항공우주센터 ALL RIGHTS RESERVED.
+            </div>
+         </div>
+         <div class="footer__select">
+            <select name="" id="" class="form-select">
+               <option value="">유관기관사이트</option>
+            </select>
+         </div>
+      </div>
+   </div>
+</footer>
+
+        <script>
+            includeHTML();
+        </script>
+    </main>
+
+
+
+
+    <!-- 메인이 들어가는 부분 eee -->
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/wow.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

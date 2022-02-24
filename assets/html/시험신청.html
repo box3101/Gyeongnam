@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=10.0,user-scalable=yes" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/ui.css">
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/wow.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 메인이 들어가는 부분 -->
+    <main class="main-wrap" id="park">
+        <header id="header" class="header">
+            <div class="header__inner inner">
+                <div class="header__logo">
+                    <a href="main.html">
+                        <img src="../img/logo.png" alt="경남테크노파크 시험평가 지원시스템">
+                    </a>
+                </div>
+
+                <ul id="gnb" class="gnb">
+                    <li class="gnb__list">
+                        <a href="시험분석소개.html" class="gnb__link">시험분석</a>
+                    </li>
+                    <li class="gnb__list">
+                        <a href="시험신청절차안내.html" class="gnb__link">신청하기</a>
+                    </li>
+                    <li class="gnb__list">
+                        <a href="관련법령.html" class="gnb__link">자료실</a>
+                    </li>
+                    <li class="gnb__list">
+                        <a href="공지사항.html" class="gnb__link">고객센터</a>
+                    </li>
+                    <li class="gnb__list">
+                        <a href="시험신청내역.html" class="gnb__link">마이페이지</a>
+                    </li>
+                </ul>
+
+                <div class="header__login">
+                    <div class="header__login-icon">
+                        <img src="../img/login-icon.svg" alt="">
+                    </div>
+
+                    <!-- TODO: hide-txt 클래스 추가시 안보임 -->
+                    <!-- 로그아웃을때 -->
+                    <a class="header__login-txt" href="로그인.html">로그인</a>
+                    <!-- 로그인일때 -->
+                    <a class="header__login-txt hide-txt">로그아웃</a>
+                </div>
+
+                <!-- 모바일메뉴 -->
+                <div class="mo-menu">
+                    <a href="#" class="menuBtn">
+                        <span class="lines"></span>
+                    </a>
+                </div>
+                <nav class="mainMenu">
+                    <div class="mainMenu__logo">
+                        <a href="main.html">
+                            <img src="../img/logo.png" alt="">
+                        </a>
+                    </div>
+                    <div class="mainMenu__login">
+                        <a href="로그인.html" class="btn-mid">
+                            로그인
+                        </a>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="시험분석.html">시험분석</a>
+                            <ul class="dapth2">
+                                <li>
+                                    <a href="시험분석소개.html">
+                                        시험분석소개
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="시험분석안내.html">
+                                        시험분석안내
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="신청하기.html">신청하기</a>
+                            <ul class="dapth2">
+                                <li>
+                                    <a href="시험신청절차안내.html">
+                                        시험신청절차안내
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="시험신청.html">
+                                        시험신청
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">자료실</a>
+                            <ul class="dapth2">
+                                <li>
+                                    <a href="관련법령.html">
+                                        관련법령
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="기술자료.html">
+                                        기술자료
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="발간물.html">
+                                        발간물
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">고객센터</a>
+                            <ul class="dapth2">
+                                <li>
+                                    <a href="공지사항.html">
+                                        공지사항
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="포토뉴스.html">
+                                        포토뉴스
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="상담등록.html">
+                                        상담등록
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="faq.html">
+                                        FAQ
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Q&A.html">
+                                        Q&A
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="suBtn">마이페이지</a>
+                            <ul class="dapth2">
+                                <li>
+                                    <a href="시험신청내역.html">
+                                        시험신청내역
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="수수료납부내역.html">
+                                        수수료납부내역
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="시험장비이용현황.html">
+                                        시험장비이용현황
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="회원정보수정.html">
+                                        회원정보수정
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <script>
+                    $(function () {
+                        // menu click event
+                        $('.menuBtn').click(function () {
+                            $(this).toggleClass('act');
+                            if ($(this).hasClass('act')) {
+                                $('.mainMenu').addClass('act');
+                            }
+                            else {
+                                $('.mainMenu').removeClass('act');
+                            }
+                        });
+
+                        $(".dapth2").hide();
+
+                        $(".mainMenu > ul > li > a").on("click", function (e) {
+                            e.preventDefault();
+
+                            if ($(this).hasClass("on")) {
+                                $(".dapth2").hide();
+                                $(this).removeClass("on");
+                            } else {
+                                $(".mainMenu.act > ul > li > a").removeClass('on');
+                                $(this).addClass("on");
+
+                                $(".dapth2").hide();
+                                $(this).siblings(".dapth2").show();
+                            }
+
+                        });
+
+                    });
+                </script>
+            </div>
+        </header>
+        <div class="sub-contents">
+            <!-- 서브공통배너 -->
+            <div class="sub-contents__banner">
+                <div class="sub-contents__tit">경남테크노파크</div>
+                <div class="sub-contents__txt">신청하기</div>
+            </div>
+
+
+            <!-- 서브 로케이션 -->
+            <div class="content-location">
+                <div class="content-location-inner inner">
+                    <ul>
+                        <li class="home">
+                            <span>
+                                <a href="">
+                                    Home</a>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <a href="">
+                                    신청하기</a>
+                            </span>
+                        </li>
+                        <li class="last">
+                            <span>
+                                <a href="">
+                                    시험신청</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sub-cnt">
+                <div class="contents inner">
+                    <div class="snb-wrap">
+                        <div class="snb-title-wrap">
+                            <h2 class="snb-title">신청하기</h2>
+                        </div>
+
+                        <div class="snb-nav-wrap">
+                            <nav class="snb-nav">
+                                <ul class="depth2">
+                                    <li>
+                                        <a href="시험신청절차안내.html">
+                                            시험신청절차안내</a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="시험신청.html">
+                                            시험신청</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                    </div>
+                    <div class="contents__right">
+                        <div class="com-page bg-fff flex pt-sm">
+
+                            <div class="com-page__right-cont w50">
+                                <div class="com-page__right ">
+                                    <ul class="tit">
+                                        <li>
+                                            <span>
+                                                시험신청
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- 시험항목 내역 -->
+                                <div class="section-wrap">
+                                    <div class="section-head flex-al-center flex-jc-bt">
+                                        <h4 class="h4">시험항목 내역</h4>
+
+                                        <div>
+                                            <a href="#" class="btn-sm cd-popup-trigger">시험항목추가</a>
+                                            <a href="#" class="btn-sm btn-bg-red">시험항목삭제</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="section-body">
+                                        <table class="list-table">
+                                            <tr>
+                                                <th>선택</th>
+                                                <th>시험분류(대)</th>
+                                                <th>시험분류(중)</th>
+                                                <th>시험항목</th>
+                                                <th>시험방법</th>
+                                                <th>의뢰내용</th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" class="form-check">
+                                                </td>
+                                                <td>TA-시험분석</td>
+                                                <td>복합제</td>
+                                                <td>CAI</td>
+                                                <td>시험방법1</td>
+                                                <td>
+                                                    <input type="text" class="form-input">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" class="form-check">
+                                                </td>
+                                                <td>TA-시험분석</td>
+                                                <td>복합제</td>
+                                                <td>CAI</td>
+                                                <td>시험방법1</td>
+                                                <td>
+                                                    <input type="text" class="form-input">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <!-- 시험성적서 -->
+                                <div class="section-wrap">
+                                    <div class="section-head">
+                                        <h4 class="h4">시험성적서</h4>
+                                    </div>
+
+                                    <div class="section-body">
+                                        <div class="form-group">
+                                            <div class="form-group__row flex-w50">
+                                                <dl>
+                                                    <dt>
+                                                        <label for="a1">종류</label>
+                                                    </dt>
+                                                    <dd>
+                                                        <div class="form-radio-wrap">
+                                                            <div class="form-radio">
+                                                                <input type="radio" name="radio1" id="a1">
+                                                                <label for="a1">
+                                                                    <span>필요없음</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-radio">
+                                                                <input type="radio" name="radio1" id="a2">
+                                                                <label for="a2">
+                                                                    <span>일반</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-radio">
+                                                                <input type="radio" name="radio1" id="a3">
+                                                                <label for="a3">
+                                                                    <span>KOLAS</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>
+                                                        <label for="b1">언어</label>
+                                                    </dt>
+                                                    <dd>
+                                                        <div class="form-radio-wrap">
+                                                            <div class="form-radio">
+                                                                <input type="radio" name="radio2" id="b1">
+                                                                <label for="b1">
+                                                                    <span>국문</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-radio">
+                                                                <input type="radio" name="radio2" id="b2">
+                                                                <label for="b2">
+                                                                    <span>영어</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                            <div class="form-group__row flex-w50">
+                                                <dl>
+                                                    <dt>
+                                                        <label for="c1">수령방법</label>
+                                                    </dt>
+                                                    <dd>
+                                                        <div class="form-radio-wrap">
+                                                            <div class="form-radio">
+                                                                <input type="radio" name="radio3" id="c1">
+                                                                <label for="c1">
+                                                                    <span>온라인배포</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-radio">
+                                                                <input type="radio" name="radio3" id="c2">
+                                                                <label for="c2">
+                                                                    <span>우편</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-radio">
+                                                                <input type="radio" name="radio3" id="c3">
+                                                                <label for="c3">
+                                                                    <span>직접방문</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>
+                                                        <label for="d1">사용용도</label>
+                                                    </dt>
+                                                    <dd>
+                                                        <input id="d1" type="text" class="form-input"
+                                                            placeholder="예) 복합소재인증">
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                            <div class="form-group__row flex-w50">
+                                                <dl>
+                                                    <dt>
+                                                        <label for="f1">발급희망일</label>
+                                                    </dt>
+                                                    <dd>
+                                                        <input id="f1" type="text" class="form-input sm"
+                                                            placeholder="성적서발급희망일">
+                                                        <button type="button" class="form-date">
+                                                            <img src="../img/icon_date_cal_btn.png" alt="">
+                                                        </button>
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>
+                                                        <label for="e1">특이사항</label>
+                                                    </dt>
+                                                    <dd>
+                                                        <input id="e1" type="text" class="form-input">
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 시료 / 시편 정보 -->
+                                <div class="section-wrap">
+                                    <div class="section-head flex-jc-bt flex-al-center">
+                                        <h4 class="h4">시료 / 시편 정보</h4>
+                                        <div class="btn-wrap">
+                                            <button type="button" class="btn-sm">행추가</button>
+                                            <button type="button" class="btn-sm btn-bg-red">행삭제</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="section-body scroll-tbl-wrap">
+                                        <div>
+                                            <table class="list-table">
+                                                <tr>
+                                                    <th>선택</th>
+                                                    <th>시료명</th>
+                                                    <th>수량</th>
+                                                    <th>재료/재질</th>
+                                                    <th>기자재/강화재</th>
+                                                    <th>공정</th>
+                                                    <th>lot No.</th>
+                                                    <th>적용산업</th>
+                                                    <th>제조사</th>
+                                                    <th>원자재/시편</th>
+                                                    <th>파일첨부</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" class="form-check">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-input input-sm"
+                                                            placeholder="시료명2">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-input input-x-sm"
+                                                            placeholder="수량">
+                                                    </td>
+                                                    <td>
+                                                        <select name="" id="" class="form-select">
+                                                            <option value="">강화재</option>
+                                                            <option value="">기자재</option>
+                                                            <option value="">복합재</option>
+                                                            <option value="">고무</option>
+                                                            <option value="">금속</option>
+                                                            <option value="">기타</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select name="" id="" class="form-select">
+                                                            <option value="">Bismaleimide / Carbon
+                                                            </option>
+                                                            <option value="">Epoxy / Carbon
+                                                            </option>
+                                                            <option value="">Epoxy / Glass
+                                                            </option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-input input-x-sm"
+                                                            placeholder="Auto">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-input input-x-sm"
+                                                            placeholder="1">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-input input-sm" placeholder="입력">
+                                                    </td>
+                                                    <td>
+                                                        <select name="" id="" class="form-select">
+                                                            <option value="">국내</option>
+                                                            <option value="">국외</option>
+                                                            <option value="">자체개발</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select name="" id="" class="form-select">
+                                                            <option value="">국내</option>
+                                                            <option value="">국외</option>
+                                                            <option value="">자체개발</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <input type="file" class="form-file">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" class="form-check">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-input input-sm"
+                                                            placeholder="시료명2">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-input input-x-sm"
+                                                            placeholder="수량">
+                                                    </td>
+                                                    <td>
+                                                        <select name="" id="" class="form-select">
+                                                            <option value="">강화재</option>
+                                                            <option value="">기자재</option>
+                                                            <option value="">복합재</option>
+                                                            <option value="">고무</option>
+                                                            <option value="">금속</option>
+                                                            <option value="">기타</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select name="" id="" class="form-select">
+                                                            <option value="">Bismaleimide / Carbon
+                                                            </option>
+                                                            <option value="">Epoxy / Carbon
+                                                            </option>
+                                                            <option value="">Epoxy / Glass
+                                                            </option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-input input-x-sm"
+                                                            placeholder="Auto">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-input input-x-sm"
+                                                            placeholder="1">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-input input-sm" placeholder="입력">
+                                                    </td>
+                                                    <td>
+                                                        <select name="" id="" class="form-select">
+                                                            <option value="">국내</option>
+                                                            <option value="">국외</option>
+                                                            <option value="">자체개발</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select name="" id="" class="form-select">
+                                                            <option value="">국내</option>
+                                                            <option value="">국외</option>
+                                                            <option value="">자체개발</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <input type="file" class="form-file">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+
+                                        <div class="section-body">
+                                            <div class="form-group">
+                                                <div class="form-group__row">
+                                                    <dl>
+                                                        <dt>
+                                                            <label for="a10">시료처리방법</label>
+                                                        </dt>
+                                                        <dd>
+                                                            <div class="form-radio-wrap">
+                                                                <div class="form-radio">
+                                                                    <input type="radio" name="radio10" id="a10">
+                                                                    <label for="a10">
+                                                                        <span>폐기</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-radio">
+                                                                    <input type="radio" name="radio10" id="a20">
+                                                                    <label for="a20">
+                                                                        <span>반환</span>
+                                                                    </label>
+                                                                    <span>(1개월이상 찾아가지 않을 경우 폐기)</span>
+                                                                </div>
+                                                            </div>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="form-group__row">
+                                                    <dl>
+                                                        <dt>
+                                                            <label for="b10">기타메모</label>
+                                                        </dt>
+                                                        <dd>
+                                                            <input id="b10" type="text" class="form-input"
+                                                                placeholder="기타 의뢰내용 작성">
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 신청인 정보 -->
+                                <div class="section-wrap">
+                                    <div class="section-head">
+                                        <h4 class="h4">신청인 정보</h4>
+                                    </div>
+
+                                    <div class="section-body">
+                                        <div class="form-group">
+                                            <div class="form-group__row flex-w50">
+                                                <dl>
+                                                    <dt>
+                                                        <label for="a30">신청인명</label>
+                                                    </dt>
+                                                    <dd>
+                                                        김신청
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>
+                                                        <label for="b30">휴대전화</label>
+                                                    </dt>
+                                                    <dd>
+                                                        010-1111-8888
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                            <div class="form-group__row flex-w50">
+                                                <dl>
+                                                    <dt>
+                                                        <label for="d30">부서</label>
+                                                    </dt>
+                                                    <dd>
+                                                        부서100
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>
+                                                        <label>신청인 메일
+                                                        </label>
+                                                    </dt>
+                                                    <dd>
+                                                        abcd@naver.com
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 신청기업 정보 -->
+                                <div class="section-wrap">
+                                    <div class="section-head">
+                                        <h4 class="h4">신청기업 정보</h4>
+                                    </div>
+
+                                    <div class="section-body">
+                                        <div class="form-group">
+                                            <div class="form-group__row flex-w50">
+                                                <dl>
+                                                    <dt>
+                                                        <label for="a30">업체명</label>
+                                                    </dt>
+                                                    <dd>
+                                                        <input type="text" class="form-input" value="한국카본">
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>
+                                                        <label for="b30">업체구분</label>
+                                                    </dt>
+                                                    <dd>
+                                                        <div class="form-radio-wrap">
+                                                            <div class="form-radio">
+                                                                <input type="radio" name="radio2" id="b30">
+                                                                <label for="b30">
+                                                                    <span>기업</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-radio">
+                                                                <input type="radio" name="radio2" id="b31">
+                                                                <label for="b31">
+                                                                    <span>기관</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-radio">
+                                                                <input type="radio" name="radio2" id="b32">
+                                                                <label for="b32">
+                                                                    <span>연구소</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-radio">
+                                                                <input type="radio" name="radio2" id="b33">
+                                                                <label for="b33">
+                                                                    <span>대학</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                            <div class="form-group__row">
+                                                <dl>
+                                                    <dt>
+                                                        <label for="c30">주소</label>
+                                                    </dt>
+                                                    <dd>
+                                                        경남 밀양시 부북면 춘화로 85(용지리 183)
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                            <div class="form-group__row flex-w50">
+                                                <dl>
+                                                    <dt>
+                                                        <label for="d30">사업자등록번호</label>
+                                                    </dt>
+                                                    <dd>
+                                                        10120120120
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>
+                                                        <label>업체 이메일
+                                                        </label>
+                                                    </dt>
+                                                    <dd>
+                                                        badfds@abc.com
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                            <div class="form-group__row flex-w50">
+                                                <dl>
+                                                    <dt>
+                                                        <label>대표자명</label>
+                                                    </dt>
+                                                    <dd>
+                                                        복대표
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>
+                                                        <label>대표 연락처
+                                                        </label>
+                                                    </dt>
+                                                    <dd>
+                                                        055-5555-5555
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 세금계산서 -->
+                                <div class="section-wrap">
+                                    <div class="section-head flex-jc-bt">
+                                        <h4 class="h4">세금계산서</h4>
+                                    </div>
+                                    <div class="section-body">
+                                        <div class="form-group">
+                                            <div class="form-group__row flex-w50">
+                                                <dl>
+                                                    <dt>
+                                                        <label for="j10">담당자</label>
+                                                    </dt>
+                                                    <dd>
+                                                        <div class="form-radio-wrap fd">
+                                                            <div class="form-radio">
+                                                                <input type="checkbox" id="j10"> <span for="j10">신청자와동일
+                                                                    </sp>
+                                                            </div>
+                                                            <div class="form-radio">
+                                                                <input type="checkbox" id="j11"> <span for="j11"
+                                                                    style="letter-spacing: -2px;">제3자
+                                                                    세금계산서발행/입금</span>
+                                                            </div>
+                                                        </div>
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>
+                                                        <label for="j20">이름</label>
+                                                    </dt>
+                                                    <dd>
+                                                        <input id="j20" type="text" class="form-input"
+                                                            placeholder="이찬용">
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                            <div class="form-group__row flex-w50">
+                                                <dl>
+                                                    <dt>
+                                                        <label for="j30">연락처</label>
+                                                    </dt>
+                                                    <dd>
+                                                        <input id="j30" type="text" class="form-input">
+                                                        &nbsp;-&nbsp;
+                                                        <input type="text" class="form-input">
+                                                        &nbsp;-&nbsp;
+                                                        <input type="text" class="form-input">
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>
+                                                        <label for="j40">이메일</label>
+                                                    </dt>
+                                                    <dd class="fd">
+                                                        <input id="j40" type="text" class="form-input">
+                                                        &nbsp;@&nbsp;
+                                                        <input type="text" class="form-input">
+                                                        &nbsp;
+                                                        <select name="" id="" class="form-select">
+                                                            <option value="">직접입력</option>
+                                                        </select>
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 소재 관련 정보 -->
+                                <div class="section-wrap">
+                                    <div class="section-head">
+                                        <h4 class="h4">소재 관련 정보
+                                        </h4>
+                                    </div>
+
+                                    <div class="section-body">
+                                        <div class="form-group">
+                                            <div class="form-group__row">
+                                                <dl>
+                                                    <dt>
+                                                        <label for="d30">제작구분</label>
+                                                    </dt>
+                                                    <dd>
+                                                        <div class="form-radio-wrap">
+                                                            <div class="form-radio">
+                                                                <input type="radio" name="radio2" id="d30">
+                                                                <label for="d30">
+                                                                    <span>재료제작사</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-radio">
+                                                                <input type="radio" name="radio2" id="d31">
+                                                                <label for="d31">
+                                                                    <span>부품제작사</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                            <div class="form-group__row flex-w50">
+                                                <dl>
+                                                    <dt>
+                                                        <label for="e30">재료명</label>
+                                                    </dt>
+                                                    <dd>
+                                                        <input id="e30" type="text" class="form-input"
+                                                            placeholder="재료명 입력(선택)">
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>
+                                                        <label for="e31">사양</label>
+                                                    </dt>
+                                                    <dd>
+                                                        <input id="e31" type="text" class="form-input"
+                                                            placeholder="사양 입력">
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                            <div class="form-group__row">
+                                                <dl>
+                                                    <dt>
+                                                        <label for="e32">(복합재료)비고</label>
+                                                    </dt>
+                                                    <dd>
+                                                        <input id="e32" type="text" class="form-input"
+                                                            placeholder="비고 입력">
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                            <div class="form-group__row">
+                                                <dl>
+                                                    <dt>
+                                                        <label for="h30">(협력)패널제작</label>
+                                                    </dt>
+                                                    <dd class="w100">
+                                                        <div class="flex flex-al-center">
+                                                            <span style="margin-right: 0.4rem;">업체명</span>
+                                                            <input id="h30" type="text" class="form-input input-sm"
+                                                                placeholder="업체명" style="margin-right: 0.4rem;">
+                                                        </div>
+                                                        <div class="flex flex-al-center">
+                                                            <span style="margin-right: 0.4rem;">주소</span>
+                                                            <input type="text" class="form-input input-sm"
+                                                                placeholder="우편번호">
+                                                            &nbsp;&nbsp;
+                                                            <input type="text" class="form-input input-lh"
+                                                                placeholder="기본주소">
+                                                            &nbsp;&nbsp;
+                                                            <input type="text" class="form-input input-sm"
+                                                                placeholder="상세주소">
+                                                            &nbsp;&nbsp;
+                                                            <button type="button" class="btn-sm">찾기</button>
+                                                        </div>
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                            <div class="form-group__row">
+                                                <dl>
+                                                    <dt>
+                                                        <label for="h31">(협력)시편가공</label>
+                                                    </dt>
+                                                    <dd class="w100">
+                                                        <div class="flex flex-al-center">
+                                                            <span style="margin-right: 0.4rem;">업체명</span>
+                                                            <input id="h31" type="text" class="form-input input-sm"
+                                                                placeholder="업체명" style="margin-right: 0.4rem;">
+                                                        </div>
+                                                        <div class="flex flex-al-center">
+                                                            <span style="margin-right: 0.4rem;">주소</span>
+                                                            <input type="text" class="form-input input-sm"
+                                                                placeholder="우편번호">
+                                                            &nbsp;&nbsp;
+                                                            <input type="text" class="form-input input-lh"
+                                                                placeholder="기본주소">
+                                                            &nbsp;&nbsp;
+                                                            <input type="text" class="form-input input-sm"
+                                                                placeholder="상세주소">
+                                                            &nbsp;&nbsp;
+                                                            <button type="button" class="btn-sm">찾기</button>
+                                                        </div>
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 구비서류 -->
+                                <div class="section-wrap">
+                                    <div class="section-head flex-jc-bt">
+                                        <h4 class="h4">구비서류(재료인증 및 동등성입증 신청 시)</h4>
+                                        <div class="btn-wrap">
+                                            <button type="button" class="btn-sm">행추가</button>
+                                            <button type="button" class="btn-sm btn-bg-red">행삭제</button>
+                                        </div>
+                                    </div>
+                                    <div class="section-body scroll-tbl-wrap">
+                                        <div>
+                                            <table class="list-table">
+                                                <colgroup>
+                                                    <col width="10%">
+                                                    <col width="40%">
+                                                    <col width="20%">
+                                                    <col width="20%">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>선택</th>
+                                                        <th>파일명</th>
+                                                        <th>파일용량</th>
+                                                        <th>파일첨부</th>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox">
+                                                        </td>
+                                                        <td>
+                                                            공정규격서.zip
+                                                        </td>
+                                                        <td>
+                                                            2.5 MB
+                                                        </td>
+                                                        <td>
+                                                            <input type="file">
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox">
+                                                        </td>
+                                                        <td>
+                                                            인증시험계획서.
+                                                        </td>
+                                                        <td>
+                                                            2.5 MB
+                                                        </td>
+                                                        <td>
+                                                            <input type="file">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- 신청 안내 및 동의 -->
+                                <div class="section-wrap">
+                                    <div class="section-head flex-jc-bt">
+                                        <h4 class="h4">신청 안내 및 동의</h4>
+                                    </div>
+                                    <div class="section-body">
+                                        <div class="pre auto" tabindex="0">
+                                            <div class="policy-context-wrap">
+                                                <div class="txt-wrap">
+                                                    <p class="txts">1. 체납이 있는 경우 접수처리 되지 않을 수 있습니다.
+                                                        <br>
+                                                        2. ‘동의합니다.’를 체크하면 신청자의 이름으로 전자날인됩니다.
+                                                        <br>
+                                                        3. 여러 건을 한 번에 신청할 경우 건별로 분리되어 접수될 수 있습니다.
+                                                        <br>
+                                                        4. 하나의 접수에는 하나의 성적서가 제공됩니다.
+                                                        <br>
+                                                        .
+                                                        <br>
+                                                        .
+                                                        <br>
+                                                        .
+                                                        <br>
+                                                        .
+                                                        <br>
+
+                                                        <br>
+                                                        ※상기 정보는 경남테크노파크의 기업지원을 위해 활용됩니다.
+                                                        <br>
+
+                                                        <br>
+                                                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                                                        elit. Unde
+                                                        <br>
+                                                        ullam mollitia velit tempora deserunt ipsa voluptate
+                                                        quia
+                                                        <br>
+                                                        tempore, aliquid praesentium perferendis fugit, odit
+                                                        animi, sed
+                                                        <br>
+                                                        sunt expedita aperiam sit? Dignissimos in soluta
+                                                        necessitatibus
+                                                        <br>
+                                                        incidunt a numquam, veritatis aliquid. Commodi, iure?
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="agree-wrap">
+                                            <div class="flex flex-jc-bt flex-al-center">
+                                                <div>
+                                                    <input type="checkbox" id="agree"> <label for="agree">위의 내용을
+                                                        확인하고
+                                                        동의합니다.</label>
+                                                </div>
+                                                <div>
+                                                    <button type="button" class="btn-lg">
+                                                        시험시청하기
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- 오른쪽 eee 본문 -->
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="cnt-bot">
+            <div class="inner">
+                <ul class="cnt-bot__wrap">
+                    <li class="cnt-bot__list">
+                        <a target="_blank" href="개인정보처리방침.html" class="cnt-bot__link">개인정보처리방침</a>
+                    </li>
+                    <li class="cnt-bot__list">
+                        <a target="_blank" href="이메일무단수집거부.html" class="cnt-bot__link">이메일무단수집거부</a>
+                    </li>
+                    <li class="cnt-bot__list">
+                        <a target="_blank" href="저작권정책.html" class="cnt-bot__link">저작권정책</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__inner inner">
+                <div class="flex-jc-bt">
+                    <div>
+                        <div class="footer__logo">
+                            <img src="../img/fot-logo.png" alt="">
+                        </div>
+                        <div class="footer__address">
+                            경남테크노파크 항공우주센터 (우 52535) 경상남도 사천시 사남면 방지로 80 <br>
+                            시스템 문의 : 055-853-6838 <br>
+                            COPYRIGHT(C) 2021 BY 경남테크노파크 항공우주센터 ALL RIGHTS RESERVED.
+                        </div>
+                    </div>
+                    <div class="footer__select">
+                        <select name="" id="" class="form-select">
+                            <option value="">유관기관사이트</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            includeHTML();
+        </script>
+
+
+        <!-- 시험항목추가 팝업 -->
+        <div class="cd-popup">
+            <div class="cd-popup-container">
+                <div class="had-tit">
+                    시험 항목 및 장비 선택 팝업
+                </div>
+
+                <div class="contents__right">
+                    <div class="com-page bg-fff flex pt-sm">
+
+                        <div class="left-menu">
+                            <p class="left-menu__tit">시험 분류 체계
+                            </p>
+                            <!-- 비금속 재료시험 -->
+                            <div class="r-wrap">
+                                <p class="tit">비금속 재료시험
+                                </p>
+                                <ul class="left-menu__list">
+                                    <li class="left-menu__item is-active">
+                                        <a href="#" class="left-menu__link">역학
+                                        </a>
+                                        <ul class="left-menu__sub-list">
+                                            <li class="left-menu__sub-item">
+                                                <a href="https://bskyvision.com/955"
+                                                    class="left-menu__sub-link is-active">인장</a>
+                                            </li>
+                                            <li class="left-menu__sub-item">
+                                                <a href="#" class="left-menu__sub-link">압축</a>
+                                            </li>
+                                            <li class="left-menu__sub-item">
+                                                <a href="#" class="left-menu__sub-link">전단</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="left-menu__item">
+                                        <a href="#" class="left-menu__link">열분석</a>
+                                        <ul class="left-menu__sub-list">
+                                            <li class="left-menu__sub-item">
+                                                <a href="#" class="left-menu__sub-link">가공</a>
+                                            </li>
+                                            <li class="left-menu__sub-item">
+                                                <a href="#" class="left-menu__sub-link">검사</a>
+                                            </li>
+                                            <li class="left-menu__sub-item">
+                                                <a href="#" class="left-menu__sub-link">시험평가</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="left-menu__item">
+                                        <a href="#" class="left-menu__link">화학</a>
+                                        <ul class="left-menu__sub-list">
+                                            <li class="left-menu__sub-item">
+                                                <a href="#" class="left-menu__sub-link">가공</a>
+                                            </li>
+                                            <li class="left-menu__sub-item">
+                                                <a href="#" class="left-menu__sub-link">검사</a>
+                                            </li>
+                                            <li class="left-menu__sub-item">
+                                                <a href="#" class="left-menu__sub-link">시험평가</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="left-menu__item">
+                                        <a href="#" class="left-menu__link">물성</a>
+                                        <ul class="left-menu__sub-list">
+                                            <li class="left-menu__sub-item">
+                                                <a href="#" class="left-menu__sub-link">가공</a>
+                                            </li>
+                                            <li class="left-menu__sub-item">
+                                                <a href="#" class="left-menu__sub-link">검사</a>
+                                            </li>
+                                            <li class="left-menu__sub-item">
+                                                <a href="#" class="left-menu__sub-link">시험평가</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- 금속재료시험 -->
+                            <div class="r-wrap">
+                                <p class="tit">금속 재료시험
+                                </p>
+                                <ul class="left-menu__list">
+                                    <li class="left-menu__item">
+                                        <a href="#" class="left-menu__link">역학
+                                        </a>
+                                        <ul class="left-menu__sub-list">
+                                            <li class="left-menu__sub-item">
+                                                <a href="https://bskyvision.com/955"
+                                                    class="left-menu__sub-link is-active">인장</a>
+                                            </li>
+                                            <li class="left-menu__sub-item">
+                                                <a href="#" class="left-menu__sub-link">압축</a>
+                                            </li>
+                                            <li class="left-menu__sub-item">
+                                                <a href="#" class="left-menu__sub-link">전단</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="left-menu__item">
+                                        <a href="#" class="left-menu__link">열분석</a>
+                                        <ul class="left-menu__sub-list">
+                                            <li class="left-menu__sub-item">
+                                                <a href="#" class="left-menu__sub-link">가공</a>
+                                            </li>
+                                            <li class="left-menu__sub-item">
+                                                <a href="#" class="left-menu__sub-link">검사</a>
+                                            </li>
+                                            <li class="left-menu__sub-item">
+                                                <a href="#" class="left-menu__sub-link">시험평가</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="left-menu__item">
+                                        <a href="#" class="left-menu__link">화학</a>
+                                        <ul class="left-menu__sub-list">
+                                            <li class="left-menu__sub-item">
+                                                <a href="#" class="left-menu__sub-link">가공</a>
+                                            </li>
+                                            <li class="left-menu__sub-item">
+                                                <a href="#" class="left-menu__sub-link">검사</a>
+                                            </li>
+                                            <li class="left-menu__sub-item">
+                                                <a href="#" class="left-menu__sub-link">시험평가</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="left-menu__item">
+                                        <a href="#" class="left-menu__link">물성</a>
+                                        <ul class="left-menu__sub-list">
+                                            <li class="left-menu__sub-item">
+                                                <a href="#" class="left-menu__sub-link">가공</a>
+                                            </li>
+                                            <li class="left-menu__sub-item">
+                                                <a href="#" class="left-menu__sub-link">검사</a>
+                                            </li>
+                                            <li class="left-menu__sub-item">
+                                                <a href="#" class="left-menu__sub-link">시험평가</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <script>
+                            (function () {
+
+                                const leftMenu = $(".left-menu");
+                                const leftMenuList = $(".left-menu__list");
+                                const leftMenuItem = $(".left-menu__item");
+                                const leftMenuLink = $(".left-menu__link");
+                                const leftMenuSubList = $(".left-menu__sub-list");
+                                const leftMenuSubItem = $(".left-menu__sub-item");
+                                const leftMenuSubLink = $(".left-menu__sub-link");
+
+
+                                // 활성화 되었을때 클릭
+                                // function Check($this) {
+                                //     $this.removeClass("is-active");
+                                // }
+
+                                // 활성화 안되었을때 클릭
+                                function CheckOff($this) {
+                                    leftMenuItem.removeClass("is-active");
+                                    $this.addClass("is-active");
+                                }
+
+                                leftMenuItem.on("click", function (e) {
+                                    e.preventDefault();
+
+                                    var $this = $(this);
+                                    var checkOn = $this.hasClass("is-active");
+
+
+                                    if (checkOn) {
+                                        Check($this);
+                                    } else {
+                                        CheckOff($this);
+                                    }
+
+                                });
+
+
+
+                                const subTitle = $(".cd-popup-container .r-wrap p.tit");
+                                var count = 1;
+
+                                subTitle.on("click", function () {
+
+                                    var checkOn = $(this).hasClass("is-active");
+
+                                    if (checkOn) {
+                                        $(this).siblings(".left-menu__list").removeClass("is-active");
+                                        $(this).removeClass('is-active');
+                                        count++;
+                                    } else {
+                                        $(".left-menu__list").removeClass("is-active");
+                                        $(this).siblings(".left-menu__list").addClass("is-active");
+                                        subTitle.removeClass("is-active");
+                                        $(this).addClass('is-active');
+                                        count--;
+                                    }
+
+                                    // if(count == 1){
+                                    //     $(".left-menu__list").removeClass("is-active");
+                                    //     $(this).siblings(".left-menu__list").addClass("is-active");
+                                    //     subTitle.removeClass("is-active");
+                                    //     $(this).addClass('is-active');
+                                    //     count--;
+                                    // }else{
+                                    //     $(this).siblings(".left-menu__list").removeClass("is-active");
+                                    //     $(this).removeClass('is-active');
+                                    //     count++;
+                                    // }
+
+
+                                });
+
+
+                            })();
+                        </script>
+
+                        <div class="com-page__right-cont w50">
+                            <div class="com-page__right ">
+                                <ul class="tit">
+                                    <li>
+                                        <span>
+                                            비금속 재료시험
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            역학
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            인장
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- 시험항목 내역 -->
+                            <div class="section-wrap">
+                                <div class="section-head flex-al-center flex-jc-bt">
+                                    <h4 class="h4">시험항목</h4>
+                                </div>
+                                <div class="section-body">
+
+                                    <div class="scroll-tbl-wrap">
+                                        <div>
+
+                                            <table class="list-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>선택</th>
+                                                        <th>시험장비 이미지</th>
+                                                        <th>시험장비명</th>
+                                                        <th>장비설명</th>
+                                                        <th>담당자</th>
+                                                        <th>단가기준</th>
+                                                        <th>단가(원)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox" class="form-check">
+                                                        </td>
+                                                        <td>
+                                                            <img src="../img/img000.png" alt="">
+                                                        </td>
+                                                        <td>장비명 1</td>
+                                                        <td>장비설명 100</td>
+                                                        <td>홍담당</td>
+                                                        <td>시간</td>
+                                                        <td>50,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox" class="form-check">
+                                                        </td>
+                                                        <td>
+                                                            <img src="../img/img-ready.png" alt="">
+                                                        </td>
+                                                        <td>장비명 2</td>
+                                                        <td>장비설명 200</td>
+                                                        <td>홍담당</td>
+                                                        <td>시간</td>
+                                                        <td>70,000</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <!--TODO: 공통 항목없는경우 -->
+                                    <div class="empty">
+                                        <div>
+                                            <div class="img">
+                                                <img src="../img/icon-empty.svg" alt="">
+                                            </div>
+                                            <p>
+                                                선택된 항목이 없습니다.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 선택한 시험항목 및 장비 목록 -->
+                            <div class="section-wrap">
+                                <div class="section-head flex-al-center flex-jc-bt">
+                                    <h4 class="h4">선택한 시험항목 및 장비 목록</h4>
+                                    <a href="" class="btn-sm btn-bg-red">행삭제</a>
+                                </div>
+                                <div class="section-body">
+                                    <div class="scroll-tbl-wrap">
+                                        <div>
+                                            <table class="list-table">
+                                                <tbody>
+                                                    <tr>
+                                                        <th>선택</th>
+                                                        <th>시험분류(대)</th>
+                                                        <th>시험분류(중)</th>
+                                                        <th>시험항목</th>
+                                                        <th>시험방법</th>
+                                                        <th>의뢰내용</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox" class="form-check">
+                                                        </td>
+                                                        <td>TA-시험분석</td>
+                                                        <td>복합제</td>
+                                                        <td>CAI</td>
+                                                        <td>시험방법1</td>
+                                                        <td>
+                                                            <input type="text" class="form-input">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox" class="form-check">
+                                                        </td>
+                                                        <td>TA-시험분석</td>
+                                                        <td>복합제</td>
+                                                        <td>CAI</td>
+                                                        <td>시험방법1</td>
+                                                        <td>
+                                                            <input type="text" class="form-input">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <!-- 오른쪽 eee 본문 -->
+
+                    </div>
+
+                </div>
+
+                <ul class="cd-buttons">
+                    <li><a href="#0">확인</a></li>
+                    <li><a class="cd-close" href="#0">닫기</a></li>
+                </ul>
+                <a href="#0" class="cd-popup-close img-replace"></a>
+            </div>
+            <!-- cd-popup-container -->
+        </div>
+        <!-- cd-popup -->
+
+        <!-- 시험항목추가 스크립트 -->
+        <script>
+            jQuery(document).ready(function ($) {
+                //open popup
+                $('.cd-popup-trigger').on('click', function (event) {
+                    event.preventDefault();
+                    $('.cd-popup').addClass('is-visible');
+                });
+
+                //close popup
+                $('.cd-popup').on('click', function (event) {
+                    if ($(event.target).is('.cd-popup-close') || $(event.target).is('.cd-popup') || $(event.target).is('.cd-close')) {
+                        event.preventDefault();
+                        $(this).removeClass('is-visible');
+                    }
+                });
+                //close popup when clicking the esc keyboard button
+                $(document).keyup(function (event) {
+                    if (event.which == '27') {
+                        $('.cd-popup').removeClass('is-visible');
+                    }
+                });
+            });
+        </script>
+    </main>
+    <!-- 메인이 들어가는 부분 eee -->
+</body>
+
+</html>

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-size: 13px;
+      line-height: 1.5em;
+      font-family: 'Questrial', Arial, sans-serif;
+      text-decoration: none;
+    }
+
+    a {
+      color: #111;
+    }
+
+    a:hover {
+      text-decoration: none !important;
+      background-color: transparent;
+      color: #a3171b !important;
+      -webkit-transition: color 300ms, background-color 300ms, opacity 300ms;
+      -moz-transition: color 300ms, background-color 300ms, opacity 300ms;
+      transition: color 300ms, background-color 300ms, opacity 300ms;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      table-layout: fixed;
+    }
+
+    /* tr:hover {background-color:rgba(35,31,32,.03)} */
+    ol,
+    ul {
+      list-style: none;
+    }
+
+    .align-c {
+      text-align: center;
+    }
+
+    body::-webkit-scrollbar {
+      display: block;
+      -webkit-appearance: none;
+    }
+
+    body::-webkit-scrollbar:vertical {
+      width: 8px;
+    }
+
+    body::-webkit-scrollbar:horizontal {
+      height: 0;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background-color: rgba(102, 102, 102, 1);
+    }
+
+    body::-webkit-scrollbar-track {
+      background-color: #dedede;
+    }
+
+    .header {
+      padding: 15px;
+      background: #231f20;
+      clear: both;
+      color: #fff;
+      line-height: 1.8em;
+    }
+
+    .container {}
+
+    .nav-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100vh;
+      background: #f5f6f7;
+      overflow-y: auto;
+    }
+
+    .content-wrapper {
+      min-width: 1600px;
+      margin-left: 0px;
+      padding: 0 30px 30px;
+    }
+
+    .nav-wrapper .logo-wrapper {
+      padding: 35px 0;
+    }
+
+    .nav-wrapper .logo-wrapper .logo-title {
+      height: 22px;
+      text-align: center;
+    }
+
+    .nav-wrapper .logo-wrapper .date {
+      font-size: 15px;
+      text-align: center;
+    }
+
+    .nav {}
+
+    .nav .nav-item {
+      width: 100%;
+    }
+
+    .nav .nav-item:first-child {
+      margin-top: 0;
+    }
+
+    .nav .has-sub {
+      position: relative;
+      display: block;
+      padding: 10px 20px;
+      border-top: 1px solid #e5e5e5;
+      border-bottom: 1px solid #e5e5e5;
+      cursor: pointer;
+    }
+
+    .nav .has-sub:after {
+      font-family: 'themify';
+      content: "\e64b";
+      font-size: 14px;
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      margin-top: -10px;
+    }
+
+    .nav .has-sub p {
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .nav .has-sub p.date {
+      margin-top: 5px;
+      padding-left: 7px;
+      font-size: 12px;
+      color: #999;
+    }
+
+    .nav .sub-nav .sub-nav-item {
+      display: inline-block;
+      padding: 10px 20px 10px 30px;
+      display: block;
+      font-size: 14px;
+    }
+
+    .content-wrapper .content-section .breadcrumb {
+      padding-top: 30px;
+      margin-bottom: 15px;
+      width: 100%;
+      border-bottom: 2px solid #231f20;
+    }
+
+    .content-wrapper .content-section .breadcrumb a {
+      position: relative;
+      padding: 0 8px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .content-wrapper .content-section .breadcrumb a:before {
+      font-family: 'themify';
+      content: "\e649";
+      font-size: 10px;
+      display: block;
+      position: absolute;
+      right: -5px;
+      top: 50%;
+      margin-top: -10px;
+    }
+
+    .content-wrapper .content-section .breadcrumb a:first-child {
+      padding: 0 8px 0 0;
+    }
+
+    .content-wrapper .content-section .breadcrumb a:last-child:before {
+      display: none;
+    }
+
+    .content-wrapper .content-section .content-notice {
+      margin-bottom: 5px;
+    }
+
+    .tbl-list {
+      /*border-top:#231f20 3px solid;*/
+    }
+
+    .tbl-list .last td {
+      border-bottom: #0057a4 1px solid;
+    }
+
+    .tbl-list th {
+      height: 15px;
+      padding: .75rem;
+      border: #ccc 1px solid;
+      background: #f1f1f1;
+      text-align: center;
+      font-weight: bold;
+      color: #231f20;
+      word-wrap: break-word;
+    }
+
+    .tbl-list td {
+      height: 15px;
+      padding: .75rem;
+      border: #ccc 1px solid;
+      word-wrap: break-word;
+    }
+
+    .tbl-list th:nth-child(1) {
+      border-left: 0;
+    }
+
+    .tbl-list th:nth-child(8) {
+      border-right: 0;
+    }
+
+    .tbl-list td:nth-child(1) {
+      text-indent: 0;
+      border-left: 0;
+    }
+
+    .tbl-list td:nth-child(2) {}
+
+    .tbl-list td:nth-child(3) {
+      font-weight: bold;
+    }
+
+    .tbl-list td:nth-child(4) {}
+
+    .tbl-list td:nth-child(5) {}
+
+    .tbl-list td:nth-child(6) {}
+
+    .tbl-list td:nth-child(8) {
+      border-right: 0;
+      color: #ff0000;
+      text-indent: 0;
+    }
+
+    .tbl-list td dl {
+      margin-top: 10px;
+    }
+
+    .tbl-list td dl:first-child {
+      margin-top: 0;
+    }
+
+    .tbl-list td dl.completed * {
+      color: #999 !important;
+    }
+
+    .tbl-list td dl .em {
+      font-weight: bold;
+      color: green;
+    }
+
+    .tbl-list td dd+dt {
+      margin-top: 5px;
+    }
+
+    .tbl-list td dd {
+      position: relative;
+      padding-left: 1em;
+      color: #231f20;
+    }
+
+    .tbl-list td dd:before {
+      content: '＊';
+      position: absolute;
+      left: 0;
+    }
+
+    .tbl-list td dd em,
+    .tbl-list td dd strong {
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    .tbl-list td a,
+    /* .tbl-list td a:hover {color:#231f20; text-decoration:none;}	 */
+  </style>
+</head>
+
+<body>
+  <div class="content-wrapper" id="content">
+
+    <div class="content-section" id="app-cn" style="display:block;">
+      <div class="breadcrumb">
+        <a href="#">프론트메뉴구조도</a>
+      </div>
+      <table class="tbl-list" style="width: 100%;">
+        <thead>
+          <tr>
+            <th>대분류</th>
+            <th>중분류</th>
+            <th>화면명</th>
+            <th>화면ID</th>
+            <th>화면명</th>
+            <th>HTML</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2">메인</td>
+            <td>메인<span style="color:darkred;font-weight:bold;">(수정)</td>
+            <td>메인화면</td>
+            <td>AP-UI-10-10-01</td>
+            <td>메인화면</td>
+            <td>
+              <a href="../html/main.html" target="_blank">main.html</a>
+            </td>
+            <td>완료</td>
+          </tr>
+          <tr>
+            <td>로그인</td>
+            <td>로그인 화면</td>
+            <td>AP-UI-10-10-02</td>
+            <td></td>
+            <td>
+              <a href="../html/로그인.html" target="_blank">로그인.html</a>
+            </td>
+            <td>완료</td>
+          </tr>
+          <tr>
+            <td rowspan="2">시험분석</td>
+            <td>시험분석소개</td>
+            <td>시험분석소개 화면</td>
+            <td>AP-UI-10-20-01</td>
+            <td></td>
+            <td>
+              <a href="../html/시험분석소개.html" target="_blank">시험분석소개.html</a>
+            </td>
+            <td>내용, 디자인 필요</td>
+          </tr>
+          <tr>
+            <td>시험분석분야안내</td>
+            <td>시험분석분야안내 화면</td>
+            <td>AP-UI-10-20-02</td>
+            <td></td>
+            <td>
+              <a href="../html/시험분석안내.html" target="_blank">시험분석안내.html</a>
+            </td>
+            <td>내용, 디자인 필요</td>
+          </tr>
+          <tr>
+            <td rowspan="3">신청하기</td>
+            <td>시험신청 절차안내</td>
+            <td>시험신청 절차안내 화면</td>
+            <td>AP-UI-10-30-01</td>
+            <td></td>
+            <td>
+              <a href="../html/시험신청절차안내.html" target="_blank">시험신청절차안내.html</a>
+            </td>
+            <td>내용, 디자인 필요</td>
+          </tr>
+          <tr>
+            <td rowspan="2">시험신청<span style="color:darkred;font-weight:bold;">(수정)</span></td>
+            <td>시험신청 화면</td>
+            <td>AP-UI-10-30-02</td>
+            <td></td>
+            <td>
+              <a href="../html/시험신청.html" target="_blank">시험신청.html</a>
+            </td>
+            <td>완료</td>
+          </tr>
+          <tr>
+            <td>시험신청 화면 > 시험신청완료</td>
+            <td>AP-UI-10-30-02</td>
+            <td></td>
+            <td>
+              <a href="../html/시험신청완료.html" target="_blank">시험신청완료.html</a>
+            </td>
+            <td>완료</td>
+          </tr>
+          <tr>
+            <td rowspan="3">자료실</td>
+            <td>관련법령</td>
+            <td></td>
+            <td>AP-UI-10-40-01</td>
+            <td></td>
+            <td>
+              <a href="../html/관련법령.html" target="_blank">관련법령.html</a>
+            </td>
+            <td>완료</td>
+          </tr>
+          <tr>
+            <td>기술자료</td>
+            <td></td>
+            <td>AP-UI-10-40-02</td>
+            <td></td>
+            <td>
+              <a href="../html/기술자료.html" target="_blank">기술자료.html</a>
+            </td>
+            <td>완료</td>
+          </tr>
+          <tr>
+            <td>발간물</td>
+            <td></td>
+            <td>AP-UI-10-40-03</td>
+            <td></td>
+            <td>
+              <a href="../html/발간물.html" target="_blank">발간물.html</a>
+            </td>
+            <td>완료</td>
+          </tr>
+          <tr>
+            <td rowspan="5">고객센터</td>
+            <td>공지사항</td>
+            <td></td>
+            <td>AP-UI-10-50-01</td>
+            <td></td>
+            <td>
+                <a href="../html/공지사항.html" target="_blank">공지사항.html</a>
+            </td>
+            <td>완료</td>
+          </tr>
+          <tr>
+            <td>포토뉴스</td>
+            <td></td>
+            <td>AP-UI-10-50-02</td>
+            <td></td>
+            <td>
+                <a href="../html/포토뉴스.html" target="_blank">포토뉴스.html</a>
+            </td>
+            <td>완료</td>
+          </tr>
+          <tr>
+            <td>상담등록</td>
+            <td></td>
+            <td>AP-UI-10-50-03</td>
+            <td></td>
+            <td>
+                <a href="../html/상담등록.html" target="_blank">상담등록.html</a>
+            </td>
+            <td>완료</td>
+          </tr>
+          <tr>
+            <td>FAQ</td>
+            <td></td>
+            <td>AP-UI-10-50-04</td>
+            <td></td>
+            <td>
+                <a href="../html/FAQ.html" target="_blank">FAQ.html</a>
+            </td>
+            <td>완료</td>
+          </tr>
+          <tr>
+            <td>Q&A</td>
+            <td></td>
+            <td>AP-UI-10-50-05</td>
+            <td></td>
+            <td>
+              <a href="../html/Q&A.html" target="_blank">Q&ampAhtml</a>
+            </td>
+            <td>완료</td>
+          </tr>
+          <tr>
+            <td rowspan="4">마이페이지</td>
+            <td>시험신청내역<span style="color:darkred;font-weight:bold;">(수정)</span></td>
+            <td></td>
+            <td>AP-UI-10-60-01</td>
+            <td></td>
+            <td>
+               <a href="../html/시험신청내역.html" target="_blank">시험신청내역.html</a>
+            </td>
+            <td>완료</td>
+          </tr>
+          <tr>
+            <td>수수료납부내역<span style="color:darkred;font-weight:bold;">(수정)</span></td>
+            <td></td>
+            <td>AP-UI-10-60-02</td>
+            <td></td>
+            <td>
+               <a href="../html/수수료납부내역.html" target="_blank">수수료납부내역.html</a>
+            </td>
+            <td>완료</td>
+          </tr>
+          <tr>
+            <td>시험장비이용현황<span style="color:darkred;font-weight:bold;">(수정)</span></td>
+            <td></td>
+            <td>AP-UI-10-60-03</td>
+            <td></td>
+            <td>
+               <a href="../html/시험장비이용현황.html" target="_blank">시험장비이용현황.html</a>
+            </td>
+            <td>완료</td>
+          </tr>
+          <tr>
+            <td>회원정보수정<span style="color:darkred;font-weight:bold;">(수정)</span></td>
+            <td></td>
+            <td>AP-UI-10-60-04</td>
+            <td></td>
+            <td>
+               <a href="../html/회원정보수정.html" target="_blank">회원정보수정.html</a>
+            </td>
+            <td>완료</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  </div>
+</body>
+
+</html>
