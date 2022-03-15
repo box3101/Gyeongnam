@@ -13,10 +13,15 @@
     <link rel="stylesheet" href="../css/animate.css">
     <link rel="stylesheet" href="../css/ui.css">
 
+    <!-- 20220310 날짜 css 추가 -->
+    <link rel="stylesheet" type="text/css" href="../css/datepicker.min.css" />
+
     <script src="../js/jquery.js"></script>
     <script src="../js/wow.js"></script>
     <script src="../js/swiper.min.js"></script>
-    <title>Document</title>
+
+    <!-- 20220310 날짜 js 추가 -->
+    <script src="../js/datepicker.min.js"></script>
 </head>
 
 <body>
@@ -313,98 +318,112 @@
                                                 <div class="mw100">
                                                     이용기간:&nbsp;&nbsp;
                                                     <div class="flex-al-center mr10">
-                                                        <input id="f1" type="text" class="form-input sm"
-                                                            placeholder="2021-01-01">
-                                                        <button type="button" class="form-date">
-                                                            <img src="../img/icon_date_cal_btn.png" alt="">
-                                                        </button>
+                                                        <dd class="input-group date">
+                                                            <input id="f1" type="text" class="form-input sm datePicker"
+                                                                placeholder="2021-01-01">
+                                                            <!-- <button type="button" class="form-date">
+                                                                <img src="../img/icon_date_cal_btn.png" alt="">
+                                                            </button>  -->
+                                                        </dd>
                                                         &nbsp;&nbsp;
                                                         <p>~</p>
                                                         &nbsp;&nbsp;
-                                                        <input id="f1" type="text" class="form-input sm"
+                                                        <input id="f1" type="text" class="form-input sm datePicker"
                                                             placeholder="2021-01-01">
-                                                        <button type="button" class="form-date mr10">
-                                                            <img src="../img/icon_date_cal_btn.png" alt="">
-                                                        </button>
-
-                                                        <!-- 검색 -->
-                                                        <button type="button"
-                                                            class="table-search__btn btn-sm">검색</button>
+                                                        <!-- <button type="button" class="form-date">
+                                                        <img src="../img/icon_date_cal_btn.png" alt="">
+                                                    </button>  -->
                                                     </div>
+
+                                                    <script>
+                                                        $(function () {
+                                                            // 날짜
+                                                            $(".datePicker").each(function () {
+                                                                $(this).datepicker({
+                                                                    autoHide: true,
+                                                                });
+                                                            });
+
+                                                        });
+                                                    </script>
+
+                                                    <!-- 검색 -->
+                                                    <button type="button" class="table-search__btn btn-sm">검색</button>
                                                 </div>
                                             </div>
                                         </div>
-
-                                        <!-- 총게시물 -->
-                                        <div class="num-txt">총 시험장비이용현황
-                                            : <span>13</span>건</div>
-
-                                        <table class="list-table">
-                                            <tr>
-                                                <th>순번</th>
-                                                <th>장비명</th>
-                                                <th>이용기간</th>
-                                                <th>사용시간(hour)
-                                                </th>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td><a href="#none" class="cd-popup-trigger">장비명1</a></td>
-                                                <td>2020.12.01 ~ 2020.12.30
-                                                </td>
-                                                <td>2</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td><a href="#none" class="cd-popup-trigger">장비명1</a></td>
-                                                <td>2020.12.01 ~ 2020.12.30
-                                                </td>
-                                                <td>30</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td><a href="#none" class="cd-popup-trigger">장비명3</a></td>
-                                                <td>2020.12.01 ~ 2020.12.30
-                                                </td>
-                                                <td>40</td>
-                                            </tr>
-                                        </table>
-
-                                        <!-- 페이지네비게이션 -->
-                                        <div class="paging">
-                                            <span>
-                                                <a href="#.">
-                                                    <img src="../img/btn_page_first.gif" alt="처음으로">
-                                                </a>
-                                            </span>
-                                            <span>
-                                                <a href="#.">
-                                                    <img src="../img/btn_page_pre.gif" alt="이전으로">
-                                                </a>
-                                            </span>
-                                            <span class="on"><a href="">1</a></span>
-                                            <span><a href="">2</a></span>
-                                            <span><a href="">3</a></span>
-                                            <span>
-                                                <a href="#.">
-                                                    <img src="../img/btn_page_next.gif" alt="다음으로">
-                                                </a>
-                                            </span>
-                                            <span>
-                                                <a href="#.">
-                                                    <img src="../img/btn_page_last.gif" alt="마지막으로">
-                                                </a>
-                                            </span>
-                                        </div>
-
                                     </div>
-                                </form>
+
+                                    <!-- 총게시물 -->
+                                    <div class="num-txt">총 시험장비이용현황
+                                        : <span>13</span>건</div>
+
+                                    <table class="list-table">
+                                        <tr>
+                                            <th>순번</th>
+                                            <th>장비명</th>
+                                            <th>이용기간</th>
+                                            <th>사용시간(hour)
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td><a href="#none" class="cd-popup-trigger">장비명1</a></td>
+                                            <td>2020.12.01 ~ 2020.12.30
+                                            </td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td><a href="#none" class="cd-popup-trigger">장비명1</a></td>
+                                            <td>2020.12.01 ~ 2020.12.30
+                                            </td>
+                                            <td>30</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><a href="#none" class="cd-popup-trigger">장비명3</a></td>
+                                            <td>2020.12.01 ~ 2020.12.30
+                                            </td>
+                                            <td>40</td>
+                                        </tr>
+                                    </table>
+
+                                    <!-- 페이지네비게이션 -->
+                                    <div class="paging">
+                                        <span>
+                                            <a href="#.">
+                                                <img src="../img/btn_page_first.gif" alt="처음으로">
+                                            </a>
+                                        </span>
+                                        <span>
+                                            <a href="#.">
+                                                <img src="../img/btn_page_pre.gif" alt="이전으로">
+                                            </a>
+                                        </span>
+                                        <span class="on"><a href="">1</a></span>
+                                        <span><a href="">2</a></span>
+                                        <span><a href="">3</a></span>
+                                        <span>
+                                            <a href="#.">
+                                                <img src="../img/btn_page_next.gif" alt="다음으로">
+                                            </a>
+                                        </span>
+                                        <span>
+                                            <a href="#.">
+                                                <img src="../img/btn_page_last.gif" alt="마지막으로">
+                                            </a>
+                                        </span>
+                                    </div>
+
                             </div>
+                            </form>
                         </div>
                     </div>
-                    <!-- 오른쪽 eee 본문 -->
                 </div>
+                <!-- 오른쪽 eee 본문 -->
             </div>
+        </div>
 
         </div>
 
@@ -498,7 +517,7 @@
                             <h4 class="h4">시험장비
                             </h4>
                         </div>
-                        
+
                         <div class="scroll-tbl-wrap">
                             <div>
 
@@ -514,12 +533,12 @@
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <img src="../img/img000.png" alt="">
+                                                <img src="https://www.zeus.go.kr/storage/images/equip/photo/201712/20161010161020_20080826000000046922%20NFEC-2008-08-065350.jpg" alt="">
                                             </td>
                                             <td>CAI 측정기
                                             </td>
                                             <td>압축측정 처리장치 </td>
-                                            <td>Cartridge Comp~~ 규격
+                                            <td>Cartridge Comp~~ 규격Cartridge Comp~~ 규격Cartridge Comp~~ 규격Cartridge Comp~~ 규격Cartridge Comp~~ 규격Cartridge Comp~~ 규격Cartridge Comp~~ 규격Cartridge Comp~~ 규격Cartridge Comp~~ 규격Cartridge Comp~~ 규격Cartridge Comp~~ 규격Cartridge Comp~~ 규격Cartridge Comp~~ 규격
                                             </td>
                                         </tr>
                                     </tbody>

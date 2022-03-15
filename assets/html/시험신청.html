@@ -13,9 +13,16 @@
     <link rel="stylesheet" href="../css/animate.css">
     <link rel="stylesheet" href="../css/ui.css">
 
+    <!-- 20220310 날짜 css 추가 -->
+    <link rel="stylesheet" type="text/css" href="../css/datepicker.min.css" />
+
     <script src="../js/jquery.js"></script>
     <script src="../js/wow.js"></script>
     <script src="../js/swiper.min.js"></script>
+
+    <!-- 20220310 날짜 js 추가 -->
+    <script src="../js/datepicker.min.js"></script>
+
     <title>Document</title>
 </head>
 
@@ -442,13 +449,27 @@
                                                     <dt>
                                                         <label for="f1">발급희망일</label>
                                                     </dt>
-                                                    <dd>
-                                                        <input id="f1" type="text" class="form-input sm"
+                                                    <dd class="input-group date">
+                                                        <input id="f1" type="text" class="form-input sm datePicker"
                                                             placeholder="성적서발급희망일">
-                                                        <button type="button" class="form-date">
+                                                        <!-- <button type="button" class="form-date">
                                                             <img src="../img/icon_date_cal_btn.png" alt="">
-                                                        </button>
+                                                        </button>  -->
                                                     </dd>
+
+                                                    <script>
+                                                        $(document).ready(function () { $.datepicker.setDefaults({ closeText: "닫기", currentText: "오늘", prevText: '이전 달', nextText: '다음 달', monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'], monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'], dayNames: ['일', '월', '화', '수', '목', '금', '토'], dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'], dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'], weekHeader: "주", yearSuffix: '년' }); });
+
+                                                        $(function () {
+                                                            // 날짜
+                                                            $(".datePicker").each(function () {
+                                                                $(this).datepicker({
+                                                                    autoHide: true,
+                                                                });
+                                                            });
+
+                                                        });
+                                                    </script>
                                                 </dl>
                                                 <dl>
                                                     <dt>
@@ -1172,11 +1193,6 @@
                 </div>
             </div>
         </footer>
-
-        <script>
-            includeHTML();
-        </script>
-
 
         <!-- 시험항목추가 팝업 -->
         <div class="cd-popup">

@@ -13,10 +13,15 @@
     <link rel="stylesheet" href="../css/animate.css">
     <link rel="stylesheet" href="../css/ui.css">
 
+    <!-- 20220310 날짜 css 추가 -->
+    <link rel="stylesheet" type="text/css" href="../css/datepicker.min.css" />
+
     <script src="../js/jquery.js"></script>
     <script src="../js/wow.js"></script>
     <script src="../js/swiper.min.js"></script>
-    <title>Document</title>
+
+    <!-- 20220310 날짜 js 추가 -->
+    <script src="../js/datepicker.min.js"></script>
 </head>
 
 <body>
@@ -304,26 +309,37 @@
                                             <div class="table-search fdi">
                                                 <!-- 신청일자 -->
                                                 <div class="mw100">
-                                                    일자구분:&nbsp;&nbsp;
-                                                    <select class="form-select sm mr10">
-                                                        <option value="신청일자">신청일자</option>
-                                                    </select>
+                                                    신청일자:&nbsp;&nbsp;
                                                     <div class="flex-al-center mr10">
-                                                        <input id="f1" type="text" class="form-input sm"
-                                                            placeholder="2021-01-01">
-                                                        <button type="button" class="form-date">
-                                                            <img src="../img/icon_date_cal_btn.png" alt="">
-                                                        </button>
+                                                        <dd class="input-group date">
+                                                            <input id="f1" type="text" class="form-input sm datePicker"
+                                                                placeholder="2021-01-01">
+                                                            <!-- <button type="button" class="form-date">
+                                                                <img src="../img/icon_date_cal_btn.png" alt="">
+                                                            </button>  -->
+                                                        </dd>
                                                         &nbsp;&nbsp;
                                                         <p>~</p>
                                                         &nbsp;&nbsp;
-                                                        <input id="f1" type="text" class="form-input sm"
+                                                        <input id="f1" type="text" class="form-input sm datePicker"
                                                             placeholder="2021-01-01">
-                                                        <button type="button" class="form-date">
-                                                            <img src="../img/icon_date_cal_btn.png" alt="">
-                                                        </button>
+                                                        <!-- <button type="button" class="form-date">
+                                                        <img src="../img/icon_date_cal_btn.png" alt="">
+                                                    </button>  -->
                                                     </div>
                                                 </div>
+
+                                                <script>
+                                                    $(function () {
+                                                        // 날짜
+                                                        $(".datePicker").each(function () {
+                                                            $(this).datepicker({
+                                                                autoHide: true,
+                                                            });
+                                                        });
+
+                                                    });
+                                                </script>
                                                 <div class="mw100 flex-al-center ">
                                                     <!-- 진행상태 -->
                                                     수수료납부상태:&nbsp;&nbsp;
